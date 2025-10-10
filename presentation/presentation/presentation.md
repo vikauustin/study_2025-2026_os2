@@ -1,56 +1,29 @@
 ---
-# Preamble
-
-## Author
-author:
-  name: Дмитрий Сергеевич Кулябов
-  degrees: DSc
-  orcid: 0000-0002-0877-7063
-  email: kulyabov-ds@rudn.ru
-  affiliation:
-    - name: Российский университет дружбы народов
-      country: Российская Федерация
-      postal-code: 117198
-      city: Москва
-      address: ул. Миклухо-Маклая, д. 6
-## Title
-title: Структура научной презентации
-subtitle: Простейший вариант
-license: CC BY
-date: 1970-01-01
-## Generic options
+## Front matter
 lang: ru-RU
-crossref:
-  lof-title: Список иллюстраций
-  lot-title: Список таблиц
-  lol-title: Листинги
-## Formats
-format:
-### Pdf output format
-  beamer:
-    toc: true
-    toc-title: Содержание
-    number-sections: true
-    colorlinks: false
-    toc-depth: 2
-    slide_level: 2
-    aspectratio: 169
-    section-titles: true
-    theme: metropolis
-    themeoptions: progressbar=frametitle,sectionpage=progressbar,numbering=fraction
-#### Language
-    babel-lang: russian
-    babel-otherlangs: english
-### Html output
-  revealjs:
-    transition: slide
-    margin: 0.2
-    smaller: false
-    output-ext: html
-    theme: beige
-    logo: _resources/image/logo_rudn.png
----
+title: Планировщик заданий в Windows
+subtitle: РОССИЙСКИЙ УНИВЕРСИТЕТ ДРУЖБЫ НАРОДОВ
+author:
+  - Устинова В. В.
+institute:
+  - Российский университет дружбы народов, Москва, Россия
+date: 10 октября 2025
 
+
+## i18n babel
+babel-lang: russian
+babel-otherlangs: english
+
+## Formatting pdf
+toc: false
+toc-title: Содержание
+slide_level: 2
+aspectratio: 169
+section-titles: true
+theme: metropolis
+header-includes:
+ - \metroset{progressbar=frametitle,sectionpage=progressbar,numbering=fraction}
+---
 
 ## Докладчик
 
@@ -242,4 +215,5 @@ format:
  
 В заключение хочу подчеркнуть: 
 Планировщик заданий – это не просто инструмент для автоматизации, а стратегический компонент ИТ-инфраструктуры. Его грамотное использование позволяет не только автоматизировать рутину, но и повысить надежность систем, снизить операционные затраты. В перспективе можно увидеть использование искусственного интеллекта для оптимизации расписаний и расширенную аналитику выполнения задач
+
 

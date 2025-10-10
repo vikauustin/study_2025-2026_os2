@@ -1,75 +1,67 @@
 ---
-# Preamble
+## Front matter
+title: "РОССИЙСКИЙ УНИВЕРСИТЕТ ДРУЖБЫ НАРОДОВ"
+subtitle: "Планировщик заданий в Windows"
+author: "Устинова Виктория Вадимовна,  НПИбд-01-24"
 
-## Author
-author:
-  name: Дмитрий Сергеевич Кулябов
-  degrees: DSc
-  orcid: 0000-0002-0877-7063
-  email: kulyabov-ds@rudn.ru
-  affiliation:
-    - name: Российский университет дружбы народов
-      country: Российская Федерация
-      postal-code: 117198
-      city: Москва
-      address: ул. Миклухо-Маклая, д. 6
-## Title
-title: "Шаблон отчёта по лабораторной работе"
-subtitle: "Простейший вариант"
-license: "CC BY"
-## Generic options
+## Generic otions
 lang: ru-RU
-number-sections: true
-toc: true
 toc-title: "Содержание"
-toc-depth: 2
-## Crossref customization
-crossref:
-  lof-title: "Список иллюстраций"
-  lot-title: "Список таблиц"
-  lol-title: "Листинги"
+
 ## Bibliography
-bibliography:
-  - bib/cite.bib
-csl: _resources/csl/gost-r-7-0-5-2008-numeric.csl
-## Formats
-format:
-### Pdf output format
-  pdf:
-    toc: true
-    number-sections: true
-    colorlinks: false
-    toc-depth: 2
-    lof: true # List of figures
-    lot: true # List of tables
-#### Document
-    documentclass: scrreprt
-    papersize: a4
-    fontsize: 12pt
-    linestretch: 1.5
-#### Language
-    babel-lang: russian
-    babel-otherlangs: english
-#### Biblatex
-    cite-method: biblatex
-    biblio-style: gost-numeric
-    biblatexoptions:
-      - backend=biber
-      - langhook=extras
-      - autolang=other*
-#### Misc options
-    csquotes: true
-    indent: true
-    header-includes: |
-      \usepackage{indentfirst}
-      \usepackage{float}
-      \floatplacement{figure}{H}
-      \usepackage[math,RM={Scale=0.94},SS={Scale=0.94},SScon={Scale=0.94},TT={Scale=MatchLowercase,FakeStretch=0.9},DefaultFeatures={Ligatures=Common}]{plex-otf}
-### Docx output format
-  docx:
-    toc: true
-    number-sections: true
-    toc-depth: 2
+bibliography: bib/cite.bib
+csl: pandoc/csl/gost-r-7-0-5-2008-numeric.csl
+
+## Pdf output format
+toc: true # Table of contents
+toc-depth: 2
+fontsize: 12pt
+linestretch: 1.5
+papersize: a4
+documentclass: scrreprt
+## I18n polyglossia
+polyglossia-lang:
+  name: russian
+  options:
+	- spelling=modern
+	- babelshorthands=true
+polyglossia-otherlangs:
+  name: english
+## I18n babel
+babel-lang: russian
+babel-otherlangs: english
+## Fonts
+mainfont: IBM Plex Serif
+romanfont: IBM Plex Serif
+sansfont: IBM Plex Sans
+monofont: IBM Plex Mono
+mathfont: STIX Two Math
+mainfontoptions: Ligatures=Common,Ligatures=TeX,Scale=0.94
+romanfontoptions: Ligatures=Common,Ligatures=TeX,Scale=0.94
+sansfontoptions: Ligatures=Common,Ligatures=TeX,Scale=MatchLowercase,Scale=0.94
+monofontoptions: Scale=MatchLowercase,Scale=0.94,FakeStretch=0.9
+mathfontoptions:
+## Biblatex
+biblatex: true
+biblio-style: "gost-numeric"
+biblatexoptions:
+  - parentracker=true
+  - backend=biber
+  - hyperref=auto
+  - language=auto
+  - autolang=other*
+  - citestyle=gost-numeric
+## Pandoc-crossref LaTeX customization
+figureTitle: "Рис."
+tableTitle: "Таблица"
+listingTitle: "Листинг"
+lolTitle: "Листинги"
+## Misc options
+indent: true
+header-includes:
+  - \usepackage{indentfirst}
+  - \usepackage{float} # keep figures where there are in the text
+  - \floatplacement{figure}{H} # keep figures where there are in the text
 ---
 
 # Оглавление {#оглавление .TOC-Heading .unnumbered}
@@ -203,6 +195,7 @@ format:
 
 # Бущущее и ИИ
 
+Интеграция с современными технологиями и будущее развитие
 Планировщик заданий не является застывшим продуктом и продолжает развиваться, интегрируясь с современными технологиями.
 
 Глубокая интеграция с PowerShell: Подавляющее большинство современных сценариев автоматизации пишется на PowerShell. Планировщик является основным механизмом для их запуска по расписанию.
